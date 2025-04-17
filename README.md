@@ -1,4 +1,6 @@
 # Python Snippets Repository
+![Run Python Tests](https://github.com/Varnasr/Snippets/actions/workflows/python-tests.yml/badge.svg)
+
 
 Welcome! This is a growing library of reusable Python functions and templates that I use across data analysis, MEL, and research workflows — especially in the fields of public health, gender, education, climate resilience, and women's economic empowerment in India and South Asia.
 
@@ -78,3 +80,32 @@ Use the links below to open key notebooks in Google Colab — no setup required.
 - [Public Health Mapping](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/map_public_health_data.ipynb)
 
 Each notebook is self-contained and uses simulated or sample data so you can try it instantly.
+
+---
+
+## 📓 Notebooks: Working Examples vs Templates
+
+This repository includes both **functional notebooks with sample data** and **template notebooks** with instructions only.
+
+### ✅ Ready-to-run (with sample data)
+These notebooks include real logic and run out-of-the-box:
+- `sector_gender_summary.ipynb` — uses `gender_sample.csv`
+- `sector_wee_time_use.ipynb` — uses `time_use_sample.csv`
+
+### 🧩 Template notebooks
+The following are structured as **reusable frameworks**, with step-by-step placeholders and markdown guidance:
+- `eda_basic_profile.ipynb`
+- `model_logistic_eval.ipynb`
+- `viz_regression_diagnostics.ipynb`
+- `map_public_health_data.ipynb`
+- `evaluate_sroi.ipynb`
+- `education_outcomes_dashboard.ipynb`
+- `survey_weighted_summary.ipynb`
+- `dashboard_prototype.ipynb`
+
+These templates help:
+- Standardise exploratory and reporting workflows
+- Provide onboarding tools for junior analysts
+- Reduce duplication in MEL and data analysis teams
+
+You can plug your own datasets into them without needing to rewrite the structure.
