@@ -11,4 +11,4 @@ def export_summary_to_excel(df, filename="output.xlsx"):
     format1 = workbook.add_format({'num_format': '#,##0', 'bold': True})
     worksheet.set_column('A:Z', 18, format1)
 
-    writer.save()
+    writer.close()
