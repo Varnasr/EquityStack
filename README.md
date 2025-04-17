@@ -1,2 +1,3 @@
-# Snippets
-A place where I share my coding experiments
+# Snippets Repository
+
+Reusable code snippets and analysis helpers.
