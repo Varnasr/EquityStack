@@ -71,10 +71,10 @@ Let me know if you use something from here or want to collaborate on more!
 
 Use the links below to open key notebooks in Google Colab — no setup required.
 
-- [Gender Summary Report](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/sector_gender_summary.ipynb)  
-- [WEE Time Use Analysis](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/sector_wee_time_use.ipynb)  
-- [Logistic Regression Evaluation](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/model_logistic_eval.ipynb)  
-- [Education Outcomes Dashboard](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/education_outcomes_dashboard.ipynb)  
-- [Public Health Mapping](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/map_public_health_data.ipynb)
+- [Gender Summary Report](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/sector_gender_summary.ipynb)  
+- [WEE Time Use Analysis](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/sector_wee_time_use.ipynb)  
+- [Logistic Regression Evaluation](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/model_logistic_eval.ipynb)  
+- [Education Outcomes Dashboard](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/education_outcomes_dashboard.ipynb)  
+- [Public Health Mapping](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/map_public_health_data.ipynb)
 
 Each notebook is self-contained and uses simulated or sample data so you can try it instantly.
