@@ -1,0 +1,50 @@
+- Snippets_Repo_Python/
+  - README.md
+  - requirements.txt
+  - LICENSE
+  - use_cases.md
+  - CONTRIBUTING.md
+  - release_notes.md
+- cleaning/
+  - clean_column_names.py
+  - handle_missing_values.py
+  - convert_dtypes.py
+  - README.md
+- eda/
+  - basic_eda_report.py
+  - correlation_matrix.py
+  - group_summary.py
+  - README.md
+  - profile_data_quick.py
+- modelling/
+  - ols_summary_table.py
+  - logistic_regression_eval.py
+  - check_multicollinearity.py
+  - README.md
+- visualisation/
+  - plot_categorical_distribution.py
+  - annotated_bar_chart.py
+  - regression_diagnostic_plots.py
+  - README.md
+  - map_district_level_data.py
+- io_helpers/
+  - read_large_csv_chunked.py
+  - export_clean_summary.py
+  - README.md
+  - read_stata_spss.py
+  - export_formatted_excel.py
+- social_sector/
+  - education_outcomes_by_group.py
+  - gender_summary_split.py
+  - wee_time_use_analysis.py
+  - public_health_access_index.py
+  - climate_risk_flags.py
+  - README.md
+- validation/
+  - validate_inputs_pydantic.py
+  - README.md
+- project_docs/
+- sample_data/
+  - gender_sample.csv
+  - time_use_sample.csv
+- notebooks/
