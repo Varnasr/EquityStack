@@ -136,3 +136,16 @@ pytest tests/
 ```
 
 All tests use dummy data and run without requiring field inputs.
+
+---
+
+## 🛣️ Roadmap
+
+We’re actively improving this repository. Here are planned features:
+
+- Add `examples/` folder with completed outputs
+- Launch GitHub Pages docs site for walkthroughs
+- Design a visual banner/logo
+- Improve interactivity of notebooks
+- Add versioned releases and changelogs
+- Write a contributor guide for open collaboration
