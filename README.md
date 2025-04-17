@@ -1,3 +1,6 @@
+<img src="https://github.com/Varnasr/EquityStack/blob/main/equitystack_banner.png" alt="EquityStack Banner" style="width:100%; max-width:960px;"/>
+
+
 # Python EquityStack Repository
 ![Run Python Tests](https://github.com/Varnasr/EquityStack/actions/workflows/python-tests.yml/badge.svg)
 
