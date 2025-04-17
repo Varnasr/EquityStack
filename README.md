@@ -1,3 +1,5 @@
+<img src="https://github.com/Varnasr/Snippets/blob/main/evalstack_banner.png" alt="EvalStack Banner" style="width:100%; max-width:900px;"/>
+
 # Python Snippets Repository
 ![Run Python Tests](https://github.com/Varnasr/Snippets/actions/workflows/python-tests.yml/badge.svg)
 
