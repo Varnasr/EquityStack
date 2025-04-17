@@ -109,3 +109,30 @@ These templates help:
 - Reduce duplication in MEL and data analysis teams
 
 You can plug your own datasets into them without needing to rewrite the structure.
+
+---
+
+## 🧾 Python Scripts and Tests
+
+This repository includes reusable `.py` scripts for cleaning, modeling, exporting, and validation. These scripts are modular and written for use in public health, education, MEL, and WEE analysis workflows.
+
+### ✅ What’s Included
+- Scripts for survey prep, formatting, regression analysis, and data exports
+- Designed to work independently or as part of custom pipelines
+- Compatible with tools like pandas, statsmodels, pyreadstat, and xlsxwriter
+
+### 🧪 Automated Testing
+
+- The `/tests/` folder includes automated `pytest` checks for all scripts
+- Tests run automatically via GitHub Actions on every push or pull request to the `main` branch
+- Badge above reflects the current test status
+
+To run tests locally:
+
+```bash
+pip install -r requirements.txt
+pip install pytest
+pytest tests/
+```
+
+All tests use dummy data and run without requiring field inputs.
