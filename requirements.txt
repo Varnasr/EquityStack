@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+seaborn
+statsmodels
+geopandas
+folium
+openpyxl
+xlsxwriter
+pyreadstat
+pydantic
+pandas-profiling
