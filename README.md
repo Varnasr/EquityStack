@@ -1,7 +1,5 @@
-<img src="https://github.com/Varnasr/Snippets/blob/main/evalstack_banner.png" alt="EvalStack Banner" style="width:100%; max-width:900px;"/>
-
-# Python Snippets Repository
-![Run Python Tests](https://github.com/Varnasr/Snippets/actions/workflows/python-tests.yml/badge.svg)
+# Python EquityStack Repository
+![Run Python Tests](https://github.com/Varnasr/EquityStack/actions/workflows/python-tests.yml/badge.svg)
 
 
 Welcome! This is a growing library of reusable Python functions and templates that I use across data analysis, MEL, and research workflows — especially in the fields of public health, gender, education, climate resilience, and women's economic empowerment in India and South Asia.
@@ -75,11 +73,11 @@ Let me know if you use something from here or want to collaborate on more!
 
 Use the links below to open key notebooks in Google Colab — no setup required.
 
-- [Gender Summary Report](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/sector_gender_summary.ipynb)  
-- [WEE Time Use Analysis](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/sector_wee_time_use.ipynb)  
-- [Logistic Regression Evaluation](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/model_logistic_eval.ipynb)  
-- [Education Outcomes Dashboard](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/education_outcomes_dashboard.ipynb)  
-- [Public Health Mapping](https://colab.research.google.com/github/Varnasr/Snippets/blob/main/notebooks/notebooks/map_public_health_data.ipynb)
+- [Gender Summary Report](https://colab.research.google.com/github/Varnasr/EquityStack/blob/main/notebooks/notebooks/sector_gender_summary.ipynb)  
+- [WEE Time Use Analysis](https://colab.research.google.com/github/Varnasr/EquityStack/blob/main/notebooks/notebooks/sector_wee_time_use.ipynb)  
+- [Logistic Regression Evaluation](https://colab.research.google.com/github/Varnasr/EquityStack/blob/main/notebooks/notebooks/model_logistic_eval.ipynb)  
+- [Education Outcomes Dashboard](https://colab.research.google.com/github/Varnasr/EquityStack/blob/main/notebooks/notebooks/education_outcomes_dashboard.ipynb)  
+- [Public Health Mapping](https://colab.research.google.com/github/Varnasr/EquityStack/blob/main/notebooks/notebooks/map_public_health_data.ipynb)
 
 Each notebook is self-contained and uses simulated or sample data so you can try it instantly.
 
