@@ -40,6 +40,32 @@ EquityStack/
 - Compatible with pandas, geopandas, folium, matplotlib, numpy
 
 ---
+# Generate CITATION.cff file for GitHub citation tab (for EquityStack or FieldStack)
+
+citation_cff = """
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "EquityStack: Reusable Tools for Applied Data Analysis and Evaluation"
+authors:
+  - family-names: "Sri Raman"
+    given-names: "Varna"
+    orcid: "https://orcid.org/0000-0002-XXXX-XXXX"
+date-released: 2024-04-18
+version: "1.0.0"
+url: "https://github.com/Varnasr/EquityStack"
+repository-code: "https://github.com/Varnasr/EquityStack"
+license: "MIT"
+type: "software"
+"""
+
+citation_path = "/mnt/data/CITATION.cff"
+with open(citation_path, "w") as f:
+    f.write(citation_cff)
+
+citation_path
+
+
+
 
 ## 🧭 Roadmap Snapshot
 
