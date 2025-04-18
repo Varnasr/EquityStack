@@ -1,20 +1,41 @@
-## 🛣️ Roadmap
 
-This repository is live and fully usable — but here’s what’s next on the roadmap:
+# 🗺️ EquityStack Roadmap
 
-### 📘 Short-Term Enhancements
-- [ ] **Add `examples/` folder** with filled notebooks and screenshots of outputs
-- [ ] **Improve notebook interactivity** with widgets and dropdown filters
-- [ ] **Tag additional use cases** in `use_cases.md` (e.g., time series, dashboard design)
+This document outlines the evolution and goals of EquityStack — a Python-based, modular repository designed for reusable analytics, evaluation tools, and social data workflows in applied research, MEL, and development practice.
 
-### 🌐 Mid-Term
-- [ ] **Launch GitHub Pages or mini-site** for documentation and notebook walkthroughs
-- [ ] **Embed Colab output previews** with screenshots or nbviewer links
+---
 
-### 🎨 Visual and Usability
-- [ ] **Add a banner/logo** to give the repo a visual identity
-- [ ] **Create a contributor guide** to help others fork, test, and contribute
+## 🔧 Current Capabilities (v1.0)
 
-### 📦 Tooling and Ecosystem
-- [ ] **Integrate code coverage reports** (e.g., with `codecov`)
-- [ ] **Add versioning to releases** via GitHub tags and changelogs
+- ✅ Plug-and-play Python notebooks using pandas, geopandas, folium, matplotlib
+- ✅ Reusable functions for I/O, cleaning, validation, visualisation
+- ✅ Support for data import (CSV, Excel, Stata)
+- ✅ Map visualisations and public health overlays
+- ✅ Automated tests via pytest + GitHub Actions
+- ✅ Modular structure by domain: education, health, gender, etc.
+
+---
+
+## 🚧 Planned Additions
+
+- [ ] Dashboards: Streamlit and Looker Studio-friendly exports
+- [ ] NLP for qualitative summaries and tagging
+- [ ] Enhanced mapping and spatial joins
+- [ ] Excel export with formatting (e.g., xlsxwriter)
+- [ ] Real example case studies for each sector
+
+---
+
+## 🧠 Contributor Opportunities
+
+- Adding notebooks for climate or gender data pipelines
+- Translating examples to Spanish or Hindi
+- Contributing test cases for social_sector functions
+- Adding reusable metadata extractors or validators
+
+---
+
+## 📦 Releases
+
+- **v1.0** — Complete modular Python layout with core notebooks, sample data, tests
+- **v1.1+** — Dashboards, NLP modules, real-world use cases
