@@ -1,3 +1,4 @@
+![EquityStack Banner](banner/EquityStack-banner.png)
 
 # EquityStack 📊
 
