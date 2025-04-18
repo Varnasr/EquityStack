@@ -59,3 +59,7 @@ See [ROADMAP.md](./ROADMAP.md) for details.
 ---
 
 You're welcome to fork, adapt, and use — EquityStack is a living repository for better, fairer data workflows.
+
+If you use this repository in your work, please cite it as:
+Sri Raman, V. (2025). *[EquityStack/FieldStack]: Reusable Tools for Applied Data Analysis and Evaluation*. GitHub. https://github.com/Varnasr/EquityStack
+
