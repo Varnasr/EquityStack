@@ -1,14 +1,10 @@
-
 cff-version: 1.2.0
-message: "If you use this repository, please cite it using the metadata below."
+message: "If you use this software, please cite it as below."
 title: "EquityStack: Reusable Tools for Applied Data Analysis and Evaluation"
+version: "1.0"
+doi: "10.5281/zenodo.<YOUR_DOI>"
 authors:
   - family-names: "Sri Raman"
     given-names: "Varna"
-    orcid: "https://orcid.org/0000-0002-XXXX-XXXX"
-date-released: 2024-04-18
-version: "1.0.0"
-url: "https://github.com/Varnasr/EquityStack"
+date-released: "2025-04-19"
 repository-code: "https://github.com/Varnasr/EquityStack"
-license: "MIT"
-type: "software"

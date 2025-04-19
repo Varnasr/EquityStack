@@ -1,0 +1,32 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install -r requirements.txt
+      - run: pytest tests/
+  r-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-r@v2
+      - run: Rscript -e "install.packages(c('testthat','quarto'))"
+      - run: Rscript -e "testthat::test_dir('tests/R')"
+  docs:
+    needs: [python-tests, r-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-r@v2
+      - run: Rscript -e "install.packages('quarto')"
+      - run: quarto render docs/index.qmd --to html
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./docs/_site

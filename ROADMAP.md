@@ -1,41 +1,38 @@
+# EquityStack Roadmap
 
-# 🗺️ EquityStack Roadmap
-
-This document outlines the evolution and goals of EquityStack — a Python-based, modular repository designed for reusable analytics, evaluation tools, and social data workflows in applied research, MEL, and development practice.
-
----
-
-## 🔧 Current Capabilities (v1.0)
-
-- ✅ Plug-and-play Python notebooks using pandas, geopandas, folium, matplotlib
-- ✅ Reusable functions for I/O, cleaning, validation, visualisation
-- ✅ Support for data import (CSV, Excel, Stata)
-- ✅ Map visualisations and public health overlays
-- ✅ Automated tests via pytest + GitHub Actions
-- ✅ Modular structure by domain: education, health, gender, etc.
+A living plan for v1.x and beyond—issues and PRs linked where relevant.
 
 ---
 
-## 🚧 Planned Additions
-
-- [ ] Dashboards: Streamlit and Looker Studio-friendly exports
-- [ ] NLP for qualitative summaries and tagging
-- [ ] Enhanced mapping and spatial joins
-- [ ] Excel export with formatting (e.g., xlsxwriter)
-- [ ] Real example case studies for each sector
-
----
-
-## 🧠 Contributor Opportunities
-
-- Adding notebooks for climate or gender data pipelines
-- Translating examples to Spanish or Hindi
-- Contributing test cases for social_sector functions
-- Adding reusable metadata extractors or validators
+## ✅ v1.0 – Initial Release (2025‑04‑19)
+- Modular folder structure  
+- Core domain helpers (`social_sector/`, `cleaning/`, etc.)  
+- Automated tests (`pytest` + `testthat`)  
+- Spatial mapping tools & examples  
+- Published on GitHub with CI badge  
 
 ---
 
-## 📦 Releases
+## 🔭 v1.1 – Q3 2025 (In progress)
+- **Interactive dashboards** in Jupyter/Quarto  
+  - Issues: #42, #58  
+- **NLP utilities** for text‑based survey analysis  
+  - PR: #55  
+- **Real‑data integration** pipelines  
+  - Connect to public APIs (e.g., NFHS, World Bank)  
+- **Multi‑language support** (EN + HI)  
 
-- **v1.0** — Complete modular Python layout with core notebooks, sample data, tests
-- **v1.1+** — Dashboards, NLP modules, real-world use cases
+---
+
+## 🚀 v1.2 – Q4 2025 (Planning)
+- **GitHub Pages site** with full docs  
+- **Command‑line interface** for common tasks  
+- **Community templates** for new analyses  
+- **Expanded sample data** (education, climate, WEE)
+
+---
+
+## 📅 Future Ideas
+- R‑shiny dashboard templates  
+- Automated data‑quality reports  
+- Benchmark datasets for public health indices
