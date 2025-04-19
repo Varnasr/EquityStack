@@ -1,10 +1,13 @@
 ![EquityStack Banner](banner/EquityStack-banner.png)
 
-# EquityStack 📊
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?label=license)](LICENSE)  
+[![Build Status](https://github.com/Varnasr/EquityStack/actions/workflows/ci.yml/badge.svg)](https://github.com/Varnasr/EquityStack/actions)  
+[![Zenodo DOI](https://zenodo.org/badge/DOI/<DOI>.svg)](https://doi.org/<DOI>)  
+[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()
 
-**EquityStack** is a Python-based, modular, and field-aware toolkit of reusable notebooks, functions, and pipelines for applied data work — especially in public health, gender, climate, education, and evaluation sectors.
+# Welcome to EquityStack 📊
 
-It helps analysts, MEL professionals, and researchers turn raw data into clean, interpretable outputs — fast.
+Hey there! I’m Varna Sri Raman, and I’m thrilled you’re exploring **EquityStack**. 🎉 This toolkit is my passion project—a modular, field-aware collection of Python scripts, notebooks, and pipelines built to make data work smooth and insightful, especially in public health, gender, climate, education, and evaluation.
 
 ---
 
@@ -12,54 +15,64 @@ It helps analysts, MEL professionals, and researchers turn raw data into clean, 
 
 ```
 EquityStack/
-├── notebooks/            # Jupyter notebooks with examples
-├── social_sector/        # Domain-specific helpers
-├── cleaning/             # Wrangling, tidying, validations
-├── visualisation/        # Custom plots, maps
-├── modelling/            # Predictive/statistical models
-├── io_helpers/           # File input/output tools
-├── validation/           # Column checks, schema tests
+├── notebooks/            # Jupyter notebooks with step-by-step examples
+├── social_sector/        # Domain-specific helpers for social development
+├── cleaning/             # Wrangling, tidying, and validation functions
+├── visualisation/        # Custom plots and interactive maps
+├── modelling/            # Statistical and predictive model templates
+├── io_helpers/           # File I/O utilities (CSV, Excel, GIS)
+├── validation/           # Schema checks and data quality tests
 ├── tests/                # pytest tests for key modules
-├── sample_data/          # Simulated or cleaned inputs
-├── README.md
-├── ROADMAP.md
-├── LICENSE
-├── requirements.txt
-├── CONTRIBUTING.md
+├── sample_data/          # Synthetic datasets to follow along
+├── README.md             # You are here!
+├── ROADMAP.md            # Detailed v1.x plans
+├── LICENSE               # MIT License
+├── requirements.txt      # Python dependencies
+├── CONTRIBUTING.md       # How to join the fun
 ```
 
 ---
 
-## 📘 What's Inside
+## 📘 What’s Inside
 
-- Modular Python scripts (`.py`) and testable functions
-- Jupyter notebooks with sample CSV data
-- Spatial plotting (e.g., health access index maps)
-- Survey analysis, education summaries, WEE examples
-- Dashboard prep: wide → long + clean exports
-- Compatible with pandas, geopandas, folium, matplotlib, numpy
+- **Easy‑to‑use scripts (`.py`)** for cleaning, validating, and transforming your data  
+- **Jupyter & Quarto notebooks** showcasing real‑world examples—from exploratory analysis to modeling  
+- **Spatial mapping tools** powered by `geopandas` and `folium` to visualize health & access indices  
+- **Survey & WEE analyses** with clear, commented code you can adapt to your own projects  
+- **Dashboard‑ready workflows** that reshape data (wide ↔ long) and export clean CSVs  
+- **Automated tests** via `pytest` ensuring everything runs reliably every time
 
 ---
 
 ## 🧭 Roadmap Snapshot
 
-> ✅ v1.0: Clean modular structure, tests, spatial & social sector tools  
-> 🚀 v1.1+: Dashboards, NLP, real datasets, multi-language support
+> ✅ **v1.0:** Clean modular structure, core domain helpers, spatial & social‑sector tools, and automated tests  
+> 🚀 **v1.1+:** Interactive dashboards, NLP utilities, integration with real datasets, multi‑language support  
 
-See [ROADMAP.md](./ROADMAP.md) for details.
-
----
-
-## 📬 Contact
-
-- Email: varna[DOT]sr [AT] gmail [DOT] com  
-- Website: [varnasr.github.io](https://varnasr.github.io)  
-- LinkedIn: [Varna Sri Raman](https://www.linkedin.com/in/varna)
+For the full details on upcoming features, check out [ROADMAP.md](./ROADMAP.md).
 
 ---
 
-You're welcome to fork, adapt, and use — EquityStack is a living repository for better, fairer data workflows.
+## 🤝 Get In Touch
 
-If you use this repository in your work, please cite it as:
-Sri Raman, V. (2025). *[EquityStack/FieldStack]: Reusable Tools for Applied Data Analysis and Evaluation*. GitHub. https://github.com/Varnasr/EquityStack
+I love feedback and contributions! Reach out anytime:
 
+- ✉️ Email: varna[DOT]sr [AT] gmail [DOT] com  
+- 🌐 Website: [varnasr.github.io](https://varnasr.github.io)  
+- 💼 LinkedIn: [Varna Sri Raman](https://www.linkedin.com/in/varna)
+
+Or just open an issue or PR here on GitHub—I’m always happy to collaborate.
+
+---
+
+## 📑 Citation
+
+If **EquityStack** supports your work, please cite:
+
+> Sri Raman, V. (2025). _EquityStack: Reusable Tools for Applied Data Analysis and Evaluation_. GitHub. https://github.com/Varnasr/EquityStack
+
+---
+
+<footer align="center">
+Made with 💛 by [Varna Sri Raman](https://on-web.link/varna) · [GitHub](https://github.com/Varnasr) · [Threads](https://www.threads.net/@varnasriraman)
+</footer>
