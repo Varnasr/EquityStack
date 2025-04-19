@@ -1,10 +1,5 @@
 ![EquityStack Banner](banner/EquityStack-banner.png)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue?label=license)](LICENSE)  
-[![Build Status](https://github.com/Varnasr/EquityStack/actions/workflows/ci.yml/badge.svg)](https://github.com/Varnasr/EquityStack/actions)  
-[![Zenodo DOI](https://zenodo.org/badge/DOI/<DOI>.svg)](https://doi.org/<DOI>)  
-[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()
-
 # Welcome to EquityStack 📊
 
 Hey there! I’m Varna Sri Raman, and I’m thrilled you’re exploring **EquityStack**. 🎉 This toolkit is my passion project—a modular, field-aware collection of Python scripts, notebooks, and pipelines built to make data work smooth and insightful, especially in public health, gender, climate, education, and evaluation.
@@ -67,9 +62,18 @@ Or just open an issue or PR here on GitHub—I’m always happy to collaborate.
 
 ## 📑 Citation
 
-If **EquityStack** supports your work, please cite:
+If **EquityStack** helps your work, please cite:
 
-> Sri Raman, V. (2025). _EquityStack: Reusable Tools for Applied Data Analysis and Evaluation_. GitHub. https://github.com/Varnasr/EquityStack
+> Sri Raman, V. (2025). _EquityStack: Reusable Tools for Applied Data Analysis and Evaluation_. GitHub. https://github.com/Varnasr/EquityStack
+
+---
+
+## 📊 Repository Status & Metadata
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?label=license)](LICENSE)  
+[![Build Status](https://github.com/Varnasr/EquityStack/actions/workflows/ci.yml/badge.svg)](https://github.com/Varnasr/EquityStack/actions)  
+[![Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.<YOUR_DOI>.svg)](https://doi.org/10.5281/zenodo.<YOUR_DOI>)  
+[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()
 
 ---
 
