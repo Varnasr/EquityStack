@@ -31,7 +31,7 @@ EquityStack/
 ## 📘 What’s Inside
 
 - **Easy‑to‑use scripts (`.py`)** for cleaning, validating, and transforming your data  
-- **Jupyter & Quarto notebooks** showcasing real‑world examples—from exploratory analysis to modeling  
+- **Jupyter & Quarto notebooks** showcasing real‑world examples — from exploratory analysis to modeling  
 - **Spatial mapping tools** powered by `geopandas` and `folium` to visualize health & access indices  
 - **Survey & WEE analyses** with clear, commented code you can adapt to your own projects  
 - **Dashboard‑ready workflows** that reshape data (wide ↔ long) and export clean CSVs  
@@ -42,7 +42,7 @@ EquityStack/
 ## 🧭 Roadmap Snapshot
 
 > ✅ **v1.0:** Clean modular structure, core domain helpers, spatial & social‑sector tools, and automated tests  
-> 🚀 **v1.1+:** Interactive dashboards, NLP utilities, integration with real datasets, multi‑language support  
+> 🚀 **v1.1+:** Interactive dashboards, NLP utilities, integration with real datasets, multi‑language support
 
 For the full details on upcoming features, check out [ROADMAP.md](./ROADMAP.md).
 
@@ -56,7 +56,7 @@ I love feedback and contributions! Reach out anytime:
 - 🌐 Website: [varnasr.github.io](https://varnasr.github.io)  
 - 💼 LinkedIn: [Varna Sri Raman](https://www.linkedin.com/in/varna)
 
-Or just open an issue or PR here on GitHub—I’m always happy to collaborate.
+Or just open an issue or PR here on GitHub — I’m always happy to collaborate.
 
 ---
 
@@ -64,7 +64,19 @@ Or just open an issue or PR here on GitHub—I’m always happy to collaborate.
 
 If **EquityStack** helps your work, please cite:
 
-> Sri Raman, V. (2025). _EquityStack: Reusable Tools for Applied Data Analysis and Evaluation_. GitHub. https://github.com/Varnasr/EquityStack
+> Sri Raman, V. (2025). *EquityStack: Reusable Tools for Applied Data Analysis and Evaluation*. Zenodo. https://doi.org/10.5281/zenodo.15249477
+
+**BibTeX**
+```bibtex
+@software{sriraman_equitystack_2025,
+  author       = {Varna Sri Raman},
+  title        = {EquityStack: Reusable Tools for Applied Data Analysis and Evaluation},
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.15249477},
+  url          = {https://doi.org/10.5281/zenodo.15249477}
+}
+```
 
 ---
 
@@ -72,7 +84,7 @@ If **EquityStack** helps your work, please cite:
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?label=license)](LICENSE)  
 [![Build Status](https://github.com/Varnasr/EquityStack/actions/workflows/ci.yml/badge.svg)](https://github.com/Varnasr/EquityStack/actions)  
-[![Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.<YOUR_DOI>.svg)](https://doi.org/10.5281/zenodo.<YOUR_DOI>)  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15249477.svg)](https://doi.org/10.5281/zenodo.15249477)  
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()
 
 ---
