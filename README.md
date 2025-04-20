@@ -83,7 +83,8 @@ If **EquityStack** helps your work, please cite:
 ## 📊 Repository Status & Metadata
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?label=license)](LICENSE)  
-[![Build Status](https://github.com/Varnasr/EquityStack/actions/workflows/ci.yml/badge.svg)](https://github.com/Varnasr/EquityStack/actions)  
+<!-- [![CI](https://github.com/Varnasr/EquityStack/actions/workflows/ci.yml/badge.svg)](...) -->
+CI workflow enabled (badge will display after first successful run)  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15249477.svg)](https://doi.org/10.5281/zenodo.15249477)  
 [![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()
 
