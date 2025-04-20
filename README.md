@@ -92,3 +92,4 @@ If **EquityStack** helps your work, please cite:
 <footer align="center">
 Made with 💛 by [Varna Sri Raman](https://on-web.link/varna) · [GitHub](https://github.com/Varnasr) · [Threads](https://www.threads.net/@varnasriraman)
 </footer>
+
