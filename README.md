@@ -21,7 +21,8 @@ This is the **data pipeline layer** of [OpenStacks for Change](https://openstack
 
 | Module | What It Does | Status |
 |--------|-------------|--------|
-| `cleaning/` | Column name standardisation, dtype conversion, missing value handling | Ready |
+| `cleaning/` | Column name standardisation, dtype conversion, missing value handling, outlier flagging, cleaning log generation | Ready |
+| `impact_evaluation/` | Causal inference: Difference-in-Differences, Propensity Score Matching, Regression Discontinuity Design | Ready |
 | `validation/` | Input validation with Pydantic models | Ready |
 | `io_helpers/` | Chunked CSV reading, Stata/SPSS import, formatted Excel export | Ready |
 | `modelling/` | Multicollinearity checks (VIF) | Ready |
