@@ -1,24 +1,5 @@
 # Changelog
 
-## [v1.2.0] - 2025-04-28
-
-### Added
-- `impact_evaluation/` module with three causal inference methods:
-  - `difference_in_differences.py` — DiD estimation with parallel trends testing and event study
-  - `propensity_score_matching.py` — PSM with nearest-neighbor matching, balance diagnostics, ATT estimation
-  - `regression_discontinuity.py` — Sharp RDD with bandwidth selection and McCrary density test
-- `cleaning/data_cleaning_pipeline.py` — Full pipeline class with deduplication, column standardisation, missing value strategies (drop/fill/median/mode), type conversion, IQR outlier flagging, and automatic cleaning log
-
-### Improved
-- README updated with new module documentation
-- Cleaning module description expanded
-
-## [v1.1.0] - 2025-04-24
-
-### Improved
-- Full repo cleanup: removed 20 placeholder files, updated docs, added .github config
-- README rewritten with honest content listing and ecosystem links
-
 ## [v1.0.1](https://github.com/Varnasr/EquityStack/tree/v1.0.1) (2025-04-19)
 
 [Full Changelog](https://github.com/Varnasr/EquityStack/compare/v1.0.0...v1.0.1)
