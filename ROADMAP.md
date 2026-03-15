@@ -1,38 +1,39 @@
 # EquityStack Roadmap
 
-A living plan for v1.x and beyond—issues and PRs linked where relevant.
+Current development priorities and planned work.
 
 ---
 
-## ✅ v1.0 – Initial Release (2025‑04‑19)
-- Modular folder structure  
-- Core domain helpers (`social_sector/`, `cleaning/`, etc.)  
-- Automated tests (`pytest` + `testthat`)  
-- Spatial mapping tools & examples  
-- Published on GitHub with CI badge  
+## v1.0 — Complete (2025-04-19)
+
+- [x] Modular folder structure with core modules
+- [x] Data cleaning utilities (column names, dtypes, missing values)
+- [x] Input validation with Pydantic
+- [x] I/O helpers (chunked CSV, Stata/SPSS import, Excel export)
+- [x] Multicollinearity checks (VIF)
+- [x] Visualisation (annotated bar charts, district-level maps)
+- [x] Public health access index
+- [x] 2 working Jupyter notebooks (gender summary, WEE time-use)
+- [x] Test suite (10 pytest files)
+- [x] Sample datasets
+
+## v1.1 — In Progress
+
+- [ ] EDA module: correlation matrices, group summaries, data profiling
+- [ ] Modelling: logistic regression evaluation, OLS summary tables
+- [ ] Social sector: climate risk flags, education outcomes, gender disaggregation
+- [ ] More Jupyter notebooks with worked examples
+- [ ] NLP utilities for text-based survey analysis
+- [ ] Public API integration (NFHS, World Bank)
+
+## v1.2 — Planned
+
+- [ ] Visualisation: categorical distributions, regression diagnostics, time series
+- [ ] GitHub Pages documentation site
+- [ ] Command-line interface for common tasks
+- [ ] Expanded sample datasets (education, climate, WEE)
+- [ ] Automated data quality reports
 
 ---
 
-## 🔭 v1.1 – Q3 2025 (In progress)
-- **Interactive dashboards** in Jupyter/Quarto  
-  - Issues: #42, #58  
-- **NLP utilities** for text‑based survey analysis  
-  - PR: #55  
-- **Real‑data integration** pipelines  
-  - Connect to public APIs (e.g., NFHS, World Bank)  
-- **Multi‑language support** (EN + HI)  
-
----
-
-## 🚀 v1.2 – Q4 2025 (Planning)
-- **GitHub Pages site** with full docs  
-- **Command‑line interface** for common tasks  
-- **Community templates** for new analyses  
-- **Expanded sample data** (education, climate, WEE)
-
----
-
-## 📅 Future Ideas
-- R‑shiny dashboard templates  
-- Automated data‑quality reports  
-- Benchmark datasets for public health indices
+For suggestions, open an [issue](https://github.com/Varnasr/EquityStack/issues) or start a [discussion](https://github.com/Varnasr/EquityStack/discussions).

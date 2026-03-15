@@ -11,27 +11,37 @@
 
 ## What This Is
 
-EquityStack is a structured collection of **Python scripts, Jupyter notebooks, and sample data** for development sector analysis. It provides ready-to-use templates for data cleaning, exploratory analysis, modelling, and visualisation — with a focus on public health, gender equity, education, and climate resilience workflows.
+EquityStack is a collection of **Python scripts, Jupyter notebooks, and sample data** for development sector analysis. It provides ready-to-use utilities for data cleaning, validation, modelling, and visualisation — with a focus on public health, gender equity, education, and climate resilience workflows.
 
 This is the **data pipeline layer** of [OpenStacks for Change](https://openstacks.dev) — an open ecosystem of tools for public interest research and evaluation.
 
 ## What's Inside
 
+### Core Modules
+
+| Module | What It Does | Status |
+|--------|-------------|--------|
+| `cleaning/` | Column name standardisation, dtype conversion, missing value handling | Ready |
+| `validation/` | Input validation with Pydantic models | Ready |
+| `io_helpers/` | Chunked CSV reading, Stata/SPSS import, formatted Excel export | Ready |
+| `modelling/` | Multicollinearity checks (VIF) | Ready |
+| `visualisation/` | Annotated bar charts, district-level choropleth maps | Ready |
+| `social_sector/` | Public health access index | Ready |
+
+### Notebooks
+
+| Notebook | What It Does |
+|----------|-------------|
+| `sector_gender_summary.ipynb` | Gender-disaggregated analysis with sample data |
+| `sector_wee_time_use.ipynb` | Women's economic empowerment time-use analysis |
+
+### Data and Testing
+
 | Directory | What It Contains |
 |-----------|-----------------|
-| `notebooks/` | Jupyter notebooks with guided analysis workflows |
-| `scripts/` | Standalone Python scripts for common tasks |
-| `cleaning/` | Data cleaning and transformation templates |
-| `eda/` | Exploratory data analysis recipes |
-| `modelling/` | Statistical modelling templates (regression, classification) |
-| `validation/` | Data validation and quality checks |
-| `visualisation/` | Chart templates and plotting utilities |
-| `social_sector/` | Domain-specific workflows (health, education, gender, WEE) |
-| `io_helpers/` | File I/O utilities (CSV, Excel, API connectors) |
-| `sample_data/` | Practice datasets for testing workflows |
-| `workflows/` | End-to-end pipeline guides |
-| `tests/` | Test suite for scripts and helpers |
-| `docs/` | Additional documentation and use case guides |
+| `sample_data/` | Gender sample and time-use sample datasets |
+| `tests/` | 10 pytest test files covering all core modules |
+| `scripts/` | Standalone export utilities |
 
 ## Getting Started
 
@@ -49,33 +59,33 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-### Typical Workflow
+### Quick Start
 
-1. Start with a notebook from `notebooks/` that matches your analysis
+1. Open a notebook from `notebooks/` to see a working analysis
 2. Load practice data from `sample_data/`
-3. Use `cleaning/` templates to prepare your own data
-4. Run `eda/` for initial exploration
-5. Apply `modelling/` templates for statistical analysis
-6. Generate outputs with `visualisation/`
+3. Use `cleaning/` to prepare your own data
+4. Apply `modelling/` and `visualisation/` for analysis and outputs
+5. Export with `io_helpers/` for Excel or dashboard-ready formats
 
 ### Key Dependencies
 
 - pandas, numpy — data manipulation
-- matplotlib, seaborn, plotly — visualisation
+- matplotlib, seaborn — visualisation
 - scikit-learn, statsmodels — modelling
-- openpyxl — Excel I/O
-- jupyter — notebooks
+- openpyxl, xlsxwriter — Excel I/O
+- pydantic — data validation
+- geopandas, folium — spatial mapping
 
 ## How It Connects
 
 EquityStack is one of several stacks in the [OpenStacks](https://openstacks.dev) ecosystem:
 
-| Stack | Focus | Link |
-|-------|-------|------|
-| [InsightStack](https://github.com/Varnasr/InsightStack) | MEL tools, calculators, documentation | Knowledge systems |
-| [FieldStack](https://github.com/Varnasr/FieldStack) | R notebooks for fieldwork & evaluation | Applied data work |
-| **EquityStack** (this repo) | Python workflows for development data | You are here |
-| [SignalStack](https://github.com/Varnasr/SignalStack) | Research Rundown newsletter archive | Knowledge curation |
+| Stack | Focus |
+|-------|-------|
+| [InsightStack](https://github.com/Varnasr/InsightStack) | MEL tools, calculators, documentation |
+| [FieldStack](https://github.com/Varnasr/FieldStack) | R notebooks for fieldwork and evaluation |
+| **EquityStack** (this repo) | Python workflows for development data |
+| [SignalStack](https://github.com/Varnasr/SignalStack) | Research Rundown newsletter archive |
 
 **Use EquityStack when** you work in Python/Jupyter. Use **FieldStack** for R-based equivalents. Use **InsightStack** for Stata tools and MEL calculators.
 
@@ -83,11 +93,12 @@ EquityStack is one of several stacks in the [OpenStacks](https://openstacks.dev)
 
 Contributions welcome — especially from data practitioners in the development sector. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Useful contributions include:
-- Jupyter notebooks from your own analysis work (anonymised)
-- New cleaning or validation templates
-- Domain-specific workflows (health, education, climate, gender)
-- Improvements to existing scripts and documentation
+High-impact areas:
+- **EDA tools** — correlation matrices, group summaries, data profiling
+- **Modelling** — logistic regression evaluation, OLS summary tables
+- **Social sector** — climate risk flags, education outcomes, gender disaggregation, WEE analysis
+- **Notebooks** — more worked examples with real analysis workflows
+- **Visualisation** — categorical distributions, regression diagnostics, time series
 
 ## Citation
 
@@ -105,4 +116,4 @@ MIT — free to use, modify, and share. See [LICENSE](LICENSE).
 
 ---
 
-**Created by [Varna Sri Raman](https://github.com/Varnasr)** — Development Economist & Social Researcher
+Part of [OpenStacks for Change](https://openstacks.dev). Created by [Varna Sri Raman](https://on-web.link/varna).
