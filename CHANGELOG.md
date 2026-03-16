@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/Varnasr/EquityStack/tree/HEAD)
+
+[Full Changelog](https://github.com/Varnasr/EquityStack/compare/v1.0.1...HEAD)
+
+**Merged pull requests:**
+
+- Chore: add git best-practice standards [\#10](https://github.com/Varnasr/EquityStack/pull/10) ([Varnasr](https://github.com/Varnasr))
+
 ## [v1.0.1](https://github.com/Varnasr/EquityStack/tree/v1.0.1) (2025-04-19)
 
 [Full Changelog](https://github.com/Varnasr/EquityStack/compare/v1.0.0...v1.0.1)
