@@ -4,8 +4,14 @@
 
 [![Part of OpenStacks](https://img.shields.io/badge/Part%20of-OpenStacks-blue)](https://openstacks.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status: Stable](https://img.shields.io/badge/Status-Stable-0969da?style=flat-square)](https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md)
 
 > Plug-and-play templates for health, gender, education, and climate equity data — built for reproducibility.
+
+> **Status: Stable.** This repository works and is correct, but it is not under active
+> development. Bug reports are welcome and issues stay open; new features are unlikely,
+> and replies are measured in weeks rather than days. Dependencies are pinned deliberately
+> so that a clone still runs years from now. See the [maintenance policy](https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md).
 
 ---
 
@@ -92,7 +98,7 @@ EquityStack is one of several stacks in the [OpenStacks](https://openstacks.dev)
 
 ## Contributing
 
-Contributions welcome — especially from data practitioners in the development sector. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions welcome — especially from data practitioners in the development sector. See [contributing guidelines](https://github.com/Varnasr/.github/blob/main/CONTRIBUTING.md).
 
 High-impact areas:
 - **EDA tools** — correlation matrices, group summaries, data profiling

@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite it as below."
 title: "EquityStack: Python Workflows for Development Data"
-version: "1.0.0"
+version: "2026.1.0"
 doi: "10.5281/zenodo.15249477"
-date-released: 2025-04-20
+date-released: "2026-08-28"
 authors:
   - family-names: Sri Raman
     given-names: Varna
