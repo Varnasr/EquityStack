@@ -83,6 +83,32 @@ draw from **[kombai.com/gallery/web](https://kombai.com/gallery/web)** — the
 owner's preferred reference for interface work that is genuinely well made. This
 applies across all of Varna's repositories and sites, not only this one.
 
+### Publishing traps, learned the hard way
+
+**A folder only becomes a page if it holds a `README.md`.** GitHub Pages runs
+`jekyll-readme-index`, which turns that README into the folder's index. A folder
+without one returns 404. Worse, several folders here hold a *nested duplicate*
+directory (`spss_scripts/spss_scripts/`, `kumu_maps/kumu_maps/`, `latex/latex/`),
+so the README sits one level down and the top-level path 404s while the deeper
+one works.
+
+**Do not link-check with `python -m http.server`.** It generates directory
+listings, so every folder link returns 200 locally and a third of them 404 in
+production. That mistake shipped once. Build with Jekyll and check that the
+built output actually contains `<dir>/index.html`.
+
+**Source folders link to GitHub, not to the site.** Uniform, never 404s, and
+honest about what they are. The designed surface is the landing page, the
+calculators and the data-starter guides; everything else is code.
+
+**`_layouts/default.html` is why a click-through still looks like the site.**
+Before it existed, `_config.yml` set `theme: minima` and any rendered README
+opened in a stock theme. Keep the layout, keep `defaults` applying it, and do
+not reintroduce a theme.
+
+**Descriptions are visible, not hover titles.** A `title` attribute shows on no
+touch device and is announced unreliably by screen readers.
+
 What actually has an interface, counted rather than assumed:
 
 | Repository | HTML | Published |

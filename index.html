@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EquityStack · Python for development sector data workflows</title>
+<meta name="description" content="Python modules for cleaning, modelling and design-based survey estimation in development research. Part of the OpenStacks family.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/stack.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="in">
+    <a class="brand" href="./"><span class="dot"></span> EquityStack</a>
+    <nav>
+      <a class="opt" href="#modules">Modules</a>
+      <a class="opt" href="#survey">Survey estimation</a>
+      <a href="https://github.com/Varnasr/EquityStack">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1 class="word">Equity<span class="s2">Stack</span></h1>
+  <p class="lede">Python for development sector data workflows: cleaning, exploration, modelling,
+    impact evaluation, and design-based estimates from complex surveys. Part of
+    <a href="https://openstacks.dev">OpenStacks</a>.</p>
+  <div class="counts">
+    <div class="hi"><b>9</b><span>Modules</span></div>
+    <div><b>34</b><span>Python files</span></div>
+    <div><b>2</b><span>Notebooks</span></div>
+    <div><b>4</b><span>Impact evaluation methods</span></div>
+  </div>
+</section>
+
+<main id="main">
+
+<section class="band white" id="survey">
+  <div class="band-h">
+    <h2>Survey estimation</h2>
+    <p class="sub">The part worth reading first</p>
+  </div>
+  <div class="tiles">
+    <a class="tile" href="https://github.com/Varnasr/EquityStack/tree/main/survey_estimation">
+      <p class="meta">survey_estimation/</p>
+      <h3>Design-based standard errors</h3>
+      <p>Weights are the easy half. A national household survey is stratified and clustered, so an
+         independence standard error is too small, often by a factor of two, and every interval
+         built on it errs in the direction that flatters the result. This implements Taylor
+         linearisation, the estimator behind Stata's <code>svy:</code> and R's <code>survey</code>.</p>
+      <p class="go">Read the module &rarr;</p>
+    </a>
+    <a class="tile" href="https://github.com/Varnasr/EquityStack/blob/main/survey_estimation/dhs_stunting.py">
+      <p class="meta">Worked example</p>
+      <h3>NFHS-5 stunting, reproduced</h3>
+      <p>Rebuilds India's published stunting table by wealth quintile from the raw DHS children's
+         recode: 35.5 percent nationally, 46.1 in the poorest quintile falling to 22.9 in the
+         richest. Reproducing a published table is the only cheap proof a pipeline is right end
+         to end.</p>
+      <p class="go">Read the script &rarr;</p>
+    </a>
+  </div>
+  <p class="note">Checked against R's <code>survey</code> package on the same data, agreeing to
+    twelve significant figures. Three behaviours that look like details and are not: subgroups
+    are domains rather than subsets, proportions get a logit interval so a small one cannot go
+    negative, and intervals use t on clusters minus strata and say which distribution produced
+    them.</p>
+</section>
+
+<section class="band navy" id="modules">
+  <div class="band-h">
+    <h2>Modules</h2>
+    <p class="sub">Nine, plus notebooks and sample data</p>
+  </div>
+  <div class="rows">
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/cleaning">
+      <span class="t"><b>Cleaning</b><span>Python</span></span>
+      <span class="d">Column name standardisation, dtype conversion, missing value handling and a cleaning log.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/eda">
+      <span class="t"><b>Exploration</b><span>Python</span></span>
+      <span class="d">Quick data profiling to see the shape of a dataset before committing to it.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/impact_evaluation">
+      <span class="t"><b>Impact evaluation</b><span>Python</span></span>
+      <span class="d">Difference-in-differences, propensity score matching and regression discontinuity.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/survey_estimation">
+      <span class="t"><b>Survey estimation</b><span>Python</span></span>
+      <span class="d">Design-based proportions and means for stratified, clustered samples.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/modelling">
+      <span class="t"><b>Modelling</b><span>Python</span></span>
+      <span class="d">Multicollinearity checks by variance inflation factor.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/validation">
+      <span class="t"><b>Validation</b><span>Pydantic</span></span>
+      <span class="d">Input validation with typed models, so a bad column fails early rather than silently.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/io_helpers">
+      <span class="t"><b>Input and output</b><span>Python</span></span>
+      <span class="d">Chunked CSV reading, Stata and SPSS import, formatted Excel export.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/social_sector">
+      <span class="t"><b>Social sector</b><span>Python</span></span>
+      <span class="d">A public health access index.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/visualisation">
+      <span class="t"><b>Visualisation</b><span>Python</span></span>
+      <span class="d">Annotated bar charts and district-level choropleth maps.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/notebooks">
+      <span class="t"><b>Notebooks</b><span>Jupyter</span></span>
+      <span class="d">Gender-disaggregated analysis and a women's economic empowerment time-use study.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/sample_data">
+      <span class="t"><b>Sample data</b><span>CSV</span></span>
+      <span class="d">Small datasets the modules and tests run against.</span></a>
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/workflows">
+      <span class="t"><b>Workflows</b><span>Guides</span></span>
+      <span class="d">End-to-end routes through an analysis.</span></a>
+  </div>
+  <p class="note">These open on GitHub. They are source code rather than pages: Python modules
+    meant to be read, cloned and run, not browsed like a website.</p>
+</section>
+
+<section class="band ash">
+  <div class="band-h">
+    <h2>Status</h2>
+    <p class="sub">Stable</p>
+  </div>
+  <p class="note">This repository works and is correct, but is not under active development. Bug
+    reports are welcome and issues stay open; new features are unlikely, and replies are measured
+    in weeks rather than days. Dependencies are pinned deliberately so that a clone still runs
+    years from now. See the
+    <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">maintenance policy</a>.</p>
+  <p class="note">The companion repositories are
+    <a href="https://github.com/Varnasr/InsightStack">InsightStack</a>, which holds the calculators
+    and the loaders that produce the data this reads, and
+    <a href="https://github.com/Varnasr/FieldStack">FieldStack</a>, which does the same work in R.</p>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="https://openstacks.dev">OpenStacks</a>
+    <a href="https://github.com/Varnasr/EquityStack">GitHub</a>
+    <a href="https://github.com/Varnasr/EquityStack/blob/main/CHANGELOG.md">Changelog</a>
+    <a href="https://github.com/Varnasr/EquityStack/blob/main/LICENSE">MIT Licence</a>
+  </div>
+  <p>Varna Sri Raman. Built for reproducibility, and licensed so you can take it.</p>
+</footer>
+</body>
+</html>
