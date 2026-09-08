@@ -17,8 +17,9 @@
   <div class="in">
     <a class="brand" href="./"><span class="dot"></span> EquityStack</a>
     <nav>
+      <a class="opt" href="#equity">Equity</a>
+      <a class="opt" href="#survey">Survey</a>
       <a class="opt" href="#modules">Modules</a>
-      <a class="opt" href="#survey">Survey estimation</a>
       <a href="https://github.com/Varnasr/EquityStack">GitHub</a>
     </nav>
   </div>
@@ -26,20 +27,72 @@
 
 <section class="hero">
   <h1 class="word">Equity<span class="s2">Stack</span></h1>
-  <p class="lede">The Python you reach for on a development research project: getting messy data into
-    shape, asking whether a programme worked, and getting the confidence intervals right
-    when the survey is clustered. Part of <a href="https://openstacks.dev">OpenStacks</a>.</p>
+  <p class="lede">The Python for a development research project, pointed at the distributional
+    question: not just what the average is, but who is carrying the bad outcome, how steep the
+    gradient runs, and whether the gap survives a clustered sample.
+    Part of <a href="https://openstacks.dev">OpenStacks</a>.</p>
   <div class="counts">
-    <div class="hi"><b>9</b><span>Modules</span></div>
-    <div><b>34</b><span>Python files</span></div>
-    <div><b>2</b><span>Notebooks</span></div>
+    <div class="hi"><b>24</b><span>Distributional measures</span></div>
+    <div><b>10</b><span>Modules</span></div>
     <div><b>4</b><span>Impact evaluation methods</span></div>
+    <div><b>101</b><span>Tests</span></div>
   </div>
 </section>
 
 <main id="main">
 
-<section class="band white" id="survey">
+<section class="band white" id="equity">
+  <div class="band-h">
+    <h2>Distributional analysis</h2>
+    <p class="sub">Who is carrying it, and how steeply</p>
+  </div>
+  <div class="tiles">
+    <a class="tile" href="https://github.com/Varnasr/EquityStack/tree/main/inequality">
+      <p class="meta">inequality/</p>
+      <h3>The concentration index</h3>
+      <p>An average tells you the level. It cannot tell you whether stunting falls on the poor,
+         which is the question a programme budget answers to. The concentration index does, on a
+         scale where negative means concentrated among the poor, and it works off a wealth
+         quintile as readily as a continuous consumption measure.</p>
+      <p class="go">Read the module &rarr;</p>
+    </a>
+    <a class="tile" href="https://github.com/Varnasr/EquityStack/blob/main/inequality/README.md">
+      <p class="meta">Comparability</p>
+      <h3>Why the raw index misleads</h3>
+      <p>A concentration index is not comparable between two places whose prevalence differs,
+         because its possible range shrinks as the mean moves away from half. Comparing states or
+         years without correcting for that is a standard error in published work. Both fixes are
+         here, and they can disagree about which way things moved.</p>
+      <p class="go">Read the guide &rarr;</p>
+    </a>
+    <a class="tile" href="https://github.com/Varnasr/EquityStack/blob/main/inequality/decomposition.py">
+      <p class="meta">Decomposition</p>
+      <h3>Where the inequality sits</h3>
+      <p>A national Gini of 0.35 is equally consistent with identical states that differ from each
+         other and with unequal states that look alike on average. Those want opposite responses.
+         The Theil split answers it exactly, and Blinder-Oaxaca separates how much of a group gap
+         is land and schooling from how much is the return on them.</p>
+      <p class="go">Read the module &rarr;</p>
+    </a>
+    <a class="tile" href="https://github.com/Varnasr/EquityStack/blob/main/inequality/incidence.py">
+      <p class="meta">Benefit incidence</p>
+      <h3>Who receives the budget</h3>
+      <p>Public tertiary hospitals and universities are free at the point of use and mostly used by
+         the better-off, so the spending is regressive whatever the intention. Splitting a budget
+         by level of service usually shows primary care progressive and tertiary regressive, the
+         two cancelling in any aggregate figure.</p>
+      <p class="go">Read the module &rarr;</p>
+    </a>
+  </div>
+  <p class="note">Twenty-four measures: Gini, Theil, Atkinson, Palma, the 80/20 ratio, Lorenz and
+    concentration curves, quantile shares, the Erreygers and Wagstaff corrections, within and
+    between decomposition, Blinder-Oaxaca, benefit incidence. All survey-weighted. Verified
+    against identities rather than against previous output, because 0.31 and 0.34 are both
+    plausible Ginis and a sign error gives a number in the right range that says the opposite of
+    the truth.</p>
+</section>
+
+<section class="band navy" id="survey">
   <div class="band-h">
     <h2>Survey estimation</h2>
     <p class="sub">The part worth reading first</p>
@@ -70,12 +123,15 @@
     bound, and the interval widens correctly when you have few clusters.</p>
 </section>
 
-<section class="band navy" id="modules">
+<section class="band white" id="modules">
   <div class="band-h">
     <h2>Modules</h2>
-    <p class="sub">Nine, plus notebooks and sample data</p>
+    <p class="sub">Ten, plus notebooks and sample data</p>
   </div>
   <div class="rows">
+    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/inequality">
+      <span class="t"><b>Inequality</b><span>Python</span></span>
+      <span class="d">Gini, Theil, Atkinson, Palma, concentration indices, decompositions and benefit incidence, all survey-weighted.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/cleaning">
       <span class="t"><b>Cleaning</b><span>Python</span></span>
       <span class="d">Get a messy export into shape, and keep a record of what you changed.</span></a>
@@ -99,7 +155,7 @@
       <span class="d">Open a Stata or SPSS file, read a CSV too big for memory, hand a colleague a usable spreadsheet.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/social_sector">
       <span class="t"><b>Social sector</b><span>Python</span></span>
-      <span class="d">Build a health access index and compare districts on it.</span></a>
+      <span class="d">Build an access or vulnerability index, and check whether a district's rank survives a different but equally defensible normalisation.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/visualisation">
       <span class="t"><b>Visualisation</b><span>Python</span></span>
       <span class="d">District maps and annotated charts that can go straight into a report.</span></a>
@@ -109,9 +165,6 @@
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/sample_data">
       <span class="t"><b>Sample data</b><span>CSV</span></span>
       <span class="d">Small datasets to try any of the above on.</span></a>
-    <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/workflows">
-      <span class="t"><b>Workflows</b><span>Guides</span></span>
-      <span class="d">Start-to-finish routes through an analysis, so you know what comes next.</span></a>
   </div>
   <p class="note">These open on GitHub, where the code lives.</p>
 </section>

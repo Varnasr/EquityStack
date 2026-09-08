@@ -7,9 +7,17 @@ Python scripts and notebooks for development sector data workflows. Part of the
 ## Layout
 
 `cleaning/`, `eda/`, `modelling/`, `validation/`, `io_helpers/`,
-`impact_evaluation/`, `social_sector/`, `visualisation/`, plus
+`impact_evaluation/`, `social_sector/`, `visualisation/`, plus the two that
+carry the repository: `inequality/` for distributional analysis and
 `survey_estimation/` for design-based estimates from complex surveys.
 Notebooks in `notebooks/`, small CSVs in `sample_data/`, tests in `tests/`.
+
+Sizes, so nobody has to guess again: 101 tests, and `inequality/` (about 950
+lines) plus `survey_estimation/` (357) plus `impact_evaluation/` (220) are most
+of the substance. The rest is technique taught against stand-in data, and some
+of it is a handful of lines. That is a deliberate split, not neglect, but do not
+describe a five-line snippet folder as a module in any user-facing copy: an
+audit on 2026-09-08 found the landing page doing exactly that.
 
 House style is numpydoc docstrings, one module per group of related functions,
 pytest with plain asserts. Match it.
@@ -42,6 +50,38 @@ pushes to main. 25 tests.
 pip install -r requirements.txt
 PYTHONPATH=$(pwd) pytest tests/
 ```
+
+## inequality
+
+The package that makes the repository's name true. Everything in it is a
+covariance between an outcome and a position in a distribution, and positions
+are where the errors hide, so three things are centralised rather than
+reimplemented per function.
+
+- **Weighted fractional ranks** live in `inequality/ranks.py` and are shared by
+  the Gini, the concentration index and both curves, so those three agree by
+  construction. Ties take the block midpoint, which is what the World Bank's DHS
+  equity work does and what makes a wealth quintile a legitimate rank variable.
+- **The mean fractional rank is exactly 0.5** for any weights and any pattern of
+  ties. Three derivations depend on it and a test asserts it.
+- **Sign convention: negative means concentrated among the poor.** Reversing
+  `outcome` and `rank_by` returns a number in the right range with the opposite
+  meaning and nothing errors, which is why the signature is
+  `concentration_index(outcome, rank_by=...)`.
+
+A raw concentration index is not comparable across different prevalences, so
+`erreygers_index` and `wagstaff_index` exist; they answer different normative
+questions and can disagree about the direction of change over time. Pick one per
+table and say which.
+
+**Do not add an analytic standard error to these.** The convenient regression
+form people quote ignores the survey design entirely. Bootstrap over PSUs within
+strata; `inequality/README.md` carries the recipe.
+
+Tests are pinned to closed-form identities, never to previous output: the Gini
+against brute-force mean absolute difference on random data, curve areas against
+their indices by trapezoid, `within + between == total` for both GE(0) and
+GE(1), Oaxaca's components summing to the gap under all four reference choices.
 
 ## survey_estimation
 
