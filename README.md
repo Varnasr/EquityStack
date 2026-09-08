@@ -134,7 +134,7 @@ EquityStack is one of several stacks in the [OpenStacks](https://openstacks.dev)
 | [FieldStack](https://github.com/Varnasr/FieldStack) | Field operations while a survey is being collected, and survey analysis after. R |
 | **EquityStack** (this repo) | Equity from a development economics perspective: distributional analysis, the concentration index, and design-based survey estimation. Python |
 
-[openstacks.dev](https://openstacks.dev) is the index for all of it. [SignalStack](https://github.com/Varnasr/SignalStack) is the companion archive for the [Research Rundown](https://researchrundown.substack.com) newsletter, alongside the stacks rather than one of them. [PolicyStack](https://github.com/Varnasr/PolicyStack) is superseded by [PolicyDhara](https://github.com/Varnasr/PolicyDhara). RootStack, BridgeStack and ViewStack are archived.
+[openstacks.dev](https://openstacks.dev) is the index for all of it. [SignalStack](https://github.com/Varnasr/SignalStack) is the companion archive for the [Research Rundown](https://varna.substack.com) newsletter, alongside the stacks rather than one of them. [PolicyStack](https://github.com/Varnasr/PolicyStack) is superseded by [PolicyDhara](https://github.com/Varnasr/PolicyDhara). RootStack, BridgeStack and ViewStack are archived.
 
 **Use EquityStack when** you work in Python/Jupyter. Use **FieldStack** for R-based equivalents. Use **InsightStack** for Stata tools and MEL calculators.
 
