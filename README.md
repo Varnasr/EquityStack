@@ -133,7 +133,7 @@ EquityStack is one of several stacks in the [OpenStacks](https://openstacks.dev)
 | [InsightStack](https://github.com/Varnasr/InsightStack) | MEL tools, calculators, documentation |
 | [FieldStack](https://github.com/Varnasr/FieldStack) | R notebooks for fieldwork and evaluation |
 | **EquityStack** (this repo) | Python workflows for development data |
-| [SignalStack](https://github.com/Varnasr/SignalStack) | Research Rundown newsletter archive |
+| [PolicyStack](https://github.com/Varnasr/PolicyStack) | 15 flagship schemes, four years of budget data, performance indicators; superseded for new work by [PolicyDhara](https://github.com/Varnasr/PolicyDhara) |
 
 **Use EquityStack when** you work in Python/Jupyter. Use **FieldStack** for R-based equivalents. Use **InsightStack** for Stata tools and MEL calculators.
 
