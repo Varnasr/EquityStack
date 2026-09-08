@@ -10,3 +10,4 @@ xlsxwriter
 pyreadstat
 pydantic
 pandas-profiling
+scipy

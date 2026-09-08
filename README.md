@@ -34,6 +34,7 @@ This is the **data pipeline layer** of [OpenStacks for Change](https://openstack
 | `modelling/` | Multicollinearity checks (VIF) | Ready |
 | `visualisation/` | Annotated bar charts, district-level choropleth maps | Ready |
 | `social_sector/` | Public health access index | Ready |
+| `survey_estimation/` | Design-based proportions and means for stratified, clustered surveys, with a worked NFHS-5 example | Ready |
 
 ### Notebooks
 
@@ -47,7 +48,7 @@ This is the **data pipeline layer** of [OpenStacks for Change](https://openstack
 | Directory | What It Contains |
 |-----------|-----------------|
 | `sample_data/` | Gender sample and time-use sample datasets |
-| `tests/` | 10 pytest test files covering all core modules |
+| `tests/` | 11 pytest test files covering all core modules |
 | `scripts/` | Standalone export utilities |
 
 ## Getting Started
