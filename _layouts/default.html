@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% assign t = page.title | default: page.dir | remove_first: "/" | remove: "/" | replace: "_", " " %}
+<title>{% if t != "" %}{{ t | capitalize }} · {% endif %}EquityStack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/stack.css' | relative_url }}">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="in">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="dot"></span> EquityStack</a>
+    <nav>
+      <a class="opt" href="{{ '/' | relative_url }}">Home</a>
+      <a class="opt" href="{{ '/' | relative_url }}">Modules</a>
+      <a href="https://github.com/Varnasr/EquityStack">GitHub</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="band white">
+  <div class="prose">{{ content }}</div>
+</main>
+<footer class="foot">
+  <div class="fl">
+    <a href="{{ '/' | relative_url }}">EquityStack</a>
+    <a href="https://openstacks.dev">OpenStacks</a>
+    <a href="https://github.com/Varnasr/EquityStack">Source</a>
+  </div>
+  <p>Varna Sri Raman. Built for open knowledge, and licensed so you can take it.</p>
+</footer>
+</body>
+</html>
