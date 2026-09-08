@@ -1,5 +1,5 @@
 
-### 🗺 Spatial Tools
+### Spatial Tools
 
 EquityStack uses:
 - `geopandas` for reading, transforming, and joining shapefiles

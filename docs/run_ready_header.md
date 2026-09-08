@@ -1,6 +1,6 @@
 
 ---
-## 🟢 Run-Ready Notebook
+## Run-Ready Notebook
 
 This notebook is ready to run out-of-the-box. It uses data from the `/sample_data` folder and requires no additional configuration.
 
