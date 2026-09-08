@@ -78,7 +78,20 @@ significant figures on the same data.
 
 ## Design references
 
-For any UI or design refresh work on this repository or elsewhere in the family,
+The house style exists as a file: `assets/css/stack.css`, the same file in all
+three stack repositories. Its tokens, type and border conventions are taken from
+**openstacks.dev**, which is the one page in the family the owner considers well
+designed. Use it rather than writing new CSS, and change it in one place, then
+copy it to the other two.
+
+The rules it encodes, so you do not undo them by accident: 2px borders and **no
+shadows**, **no border-radius**, Bricolage Grotesque in uppercase for display,
+Work Sans for prose, JetBrains Mono for labels and numbers, and colour bands
+(`.band.white`, `.ash`, `.navy`, `.teal`, `.brick`, `.black`) rather than cards
+floating on a page. Saffron `#f2a541` is the single accent and carries the focus
+ring. No emoji anywhere.
+
+For anything the house style does not already answer,
 draw from **[kombai.com/gallery/web](https://kombai.com/gallery/web)** — the
 owner's preferred reference for interface work that is genuinely well made. This
 applies across all of Varna's repositories and sites, not only this one.
@@ -87,10 +100,10 @@ applies across all of Varna's repositories and sites, not only this one.
 
 **A folder only becomes a page if it holds a `README.md`.** GitHub Pages runs
 `jekyll-readme-index`, which turns that README into the folder's index. A folder
-without one returns 404. Worse, several folders here hold a *nested duplicate*
-directory (`spss_scripts/spss_scripts/`, `kumu_maps/kumu_maps/`, `latex/latex/`),
-so the README sits one level down and the top-level path 404s while the deeper
-one works.
+without one returns 404. This repository has no nested-duplicate folders;
+InsightStack has twelve of them (`spss_scripts/spss_scripts/`, `latex/latex/`
+and so on), where the README sits one level down and the top-level path 404s
+while the deeper one works. Check before assuming the trap applies here.
 
 **Do not link-check with `python -m http.server`.** It generates directory
 listings, so every folder link returns 200 locally and a third of them 404 in
@@ -109,13 +122,32 @@ not reintroduce a theme.
 **Descriptions are visible, not hover titles.** A `title` attribute shows on no
 touch device and is announced unreliably by screen readers.
 
-What actually has an interface, counted rather than assumed:
+**Check the landing page on a phone, not only in the link checker.** `.row span`
+in `stack.css` carries `white-space: nowrap` so the short language tag ("Python,
+R") keeps to one line. Adding a description as another span inside `.row` makes
+it inherit that, and the page then scrolls sideways: 1384px against a 390px
+viewport, invisible on a desktop and the first thing a phone shows. The nowrap is
+now scoped to `.row .t span`. After any change to a landing page, load it at
+390x844 and compare `documentElement.scrollWidth` against `clientWidth`.
 
-| Repository | HTML | Published |
+**Write for the person with the problem, not for the folder.** "Causal inference:
+DiD, PSM, IV/2SLS, RDD and sensitivity analysis" is accurate and tells a reader
+nothing about when to open it. Lead with the question ("Did the programme work,
+and can you defend the answer?"), then name the methods so someone who already
+knows what they want can still find it.
+
+What actually has an interface, counted rather than assumed (2026-09-08, after
+all three landing pages shipped):
+
+| Repository | HTML | Published at |
 |---|---|---|
-| InsightStack | 8 files: six interactive calculators in `calculators/`, a Taguette coding page, a root `index.html` | GitHub Pages, Jekyll `minima` theme via `_config.yml` |
-| FieldStack | one root `index.html` | GitHub Pages |
-| EquityStack | none | not published |
+| InsightStack | 9 files: a root `index.html`, six calculators in `calculators/`, a Taguette export page, and `_layouts/default.html` | https://varnasr.github.io/InsightStack/ |
+| FieldStack | a root `index.html` and `_layouts/default.html` | https://varnasr.github.io/FieldStack/ |
+| EquityStack | a root `index.html` and `_layouts/default.html` | https://varnasr.github.io/EquityStack/ |
+
+All three now run GitHub Pages with `jekyll-readme-index` and **no theme**. An
+older version of this table said InsightStack used `minima` and EquityStack was
+unpublished; both were true once and neither is now.
 
 The six calculators are the largest design surface in the stack family and the
 obvious place to start. Beyond the stacks: SignalStack, Experiments,
