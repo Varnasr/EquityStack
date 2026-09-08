@@ -83,11 +83,19 @@ draw from **[kombai.com/gallery/web](https://kombai.com/gallery/web)** — the
 owner's preferred reference for interface work that is genuinely well made. This
 applies across all of Varna's repositories and sites, not only this one.
 
-Two constraints worth knowing before proposing anything visual:
+What actually has an interface, counted rather than assumed:
 
-- This repository ships no HTML at all, and neither does InsightStack. The pages
-  that exist are FieldStack's `index.html`, SignalStack, Experiments,
-  openstacks.dev and the ImpactMojo properties.
-- `Experiments` serves under a strict Content Security Policy allowlisting
-  specific CDNs. A design pulling fonts or scripts from anywhere else fails there
-  silently.
+| Repository | HTML | Published |
+|---|---|---|
+| InsightStack | 8 files: six interactive calculators in `calculators/`, a Taguette coding page, a root `index.html` | GitHub Pages, Jekyll `minima` theme via `_config.yml` |
+| FieldStack | one root `index.html` | GitHub Pages |
+| EquityStack | none | not published |
+
+The six calculators are the largest design surface in the stack family and the
+obvious place to start. Beyond the stacks: SignalStack, Experiments,
+openstacks.dev and the ImpactMojo properties.
+
+One constraint that catches people: `Experiments` serves under a strict Content
+Security Policy allowlisting specific CDNs, so a design pulling fonts or scripts
+from anywhere else fails there silently. Read its `netlify.toml` before adding
+any external asset.
