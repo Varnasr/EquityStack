@@ -191,9 +191,11 @@ unpublished; both were true once and neither is now.
 
 The six calculators are the largest design surface in the stack family and the
 obvious place to start. Beyond the stacks: Experiments, openstacks.dev and the
-ImpactMojo properties. SignalStack is dead and ViewStack, BridgeStack and
-RootStack are archived; the live family is InsightStack, FieldStack,
-EquityStack and PolicyStack under OpenStacks-for-Change.
+ImpactMojo properties. The family is three stacks, InsightStack, FieldStack and
+EquityStack, with openstacks.dev as the index. SignalStack is the Research
+Rundown companion archive, beside the stacks rather than one of them.
+PolicyStack is superseded by PolicyDhara; RootStack, BridgeStack and ViewStack
+are archived.
 
 One constraint that catches people: `Experiments` serves under a strict Content
 Security Policy allowlisting specific CDNs, so a design pulling fonts or scripts
