@@ -198,3 +198,47 @@ def test_the_documented_top_level_import_works():
     assert callable(survey_estimation.svy_prop_by)
     assert callable(survey_estimation.svy_prop)
     assert callable(survey_estimation.compare_to_published)
+
+
+# Reference values from R's survey package 4.2.1 on R 4.3.3, the standard
+# implementation of the Taylor linearisation estimator, computed on the
+# deterministic dataset built below:
+#
+#   des <- svydesign(ids = ~psu, strata = ~strata, weights = ~weight,
+#                    data = d, nest = TRUE)
+#   svyby(~y, ~g, des, svymean); svymean(~y, des)
+#
+# (estimate, standard error) per domain. Degrees of freedom: 40.
+R_SURVEY_REFERENCE = {
+    0: (0.257668711656442, 0.066720118116535),
+    1: (0.304878048780488, 0.077009352102719),
+    2: (0.323232323232323, 0.079772191460902),
+    3: (0.273092369477912, 0.070351627528854),
+    "Total": (0.289766970618034, 0.016994589245526),
+}
+
+
+def _reference_frame():
+    """A stratified, clustered sample built without any random number generator,
+    so the fixture is stable across every version of every library."""
+    i = np.arange(180)
+    return pd.DataFrame({
+        "y": np.where((i * i + 3 * i) % 7 < 3, 1.0, 0.0),
+        "g": i % 4,
+        "weight": 0.5 + ((i * 7) % 13) / 10.0,
+        "psu": i // 4,
+        "strata": (i // 4) // 9,
+    })
+
+
+def test_matches_r_survey_package_to_twelve_significant_figures():
+    """The closed-form tests above pin the estimator to cases we can derive by
+    hand. This one pins it to the reference implementation everyone else uses."""
+    out = svy_prop_by(_reference_frame(), "y", by="g", ci="linear")
+    assert out["df"].iloc[0] == 40
+
+    for _, row in out.iterrows():
+        key = row["g"] if row["g"] == "Total" else int(row["g"])
+        expected_est, expected_se = R_SURVEY_REFERENCE[key]
+        assert abs(row["estimate"] - expected_est) < 1e-12, f"estimate for {key}"
+        assert abs(row["se"] - expected_se) < 1e-12, f"standard error for {key}"
