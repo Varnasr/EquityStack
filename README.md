@@ -1,168 +1,93 @@
 # EquityStack
 
-**Python scripts and Jupyter notebooks for development sector data workflows.**
+Python for distributional analysis and design-based survey estimation in
+development research. Part of [OpenStacks](https://openstacks.dev). Status:
+Stable, per the family
+[maintenance policy](https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md).
 
-[![Part of OpenStacks](https://img.shields.io/badge/Part%20of-OpenStacks-blue)](https://openstacks.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Status: Stable](https://img.shields.io/badge/Status-Stable-0969da?style=flat-square)](https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md)
+Site: [varnasr.github.io/EquityStack](https://varnasr.github.io/EquityStack/).
 
-> Distributional analysis and survey estimation for health, gender, education and climate equity data.
+## The two main packages
 
-> **Status: Stable.** This repository works and is correct, but it is not under active
-> development. Bug reports are welcome and issues stay open; new features are unlikely,
-> and replies are measured in weeks rather than days. Dependencies are pinned deliberately
-> so that a clone still runs years from now. See the [maintenance policy](https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md).
+**`inequality/`** measures how unequally an outcome is spread and across whom.
+Gini, Theil, Atkinson, Palma, the 80/20 ratio, Lorenz and concentration
+curves, the concentration index with the Erreygers and Wagstaff corrections,
+Theil within/between decomposition, Blinder-Oaxaca, and benefit incidence by
+level of service. All survey-weighted. 54 tests. See
+[`inequality/README.md`](inequality/README.md).
 
----
-
-## What This Is
-
-EquityStack is a collection of **Python scripts, Jupyter notebooks, and sample data** for development sector analysis. It provides ready-to-use utilities for data cleaning, validation, modelling, and visualisation — with a focus on public health, gender equity, education, and climate resilience workflows.
-
-This is the **data pipeline layer** of [OpenStacks for Change](https://openstacks.dev) — an open ecosystem of tools for public interest research and evaluation.
-
-## The two modules to read first
-
-Most of this repository is technique on stand-in data. Two parts are not, and
-they are what the name is about.
-
-**`inequality/`** answers *who has it*. The Gini says how unequally consumption
-is spread; the concentration index says whether stunting falls on the poor, by
-how much, and comparably across states whose prevalence differs. It also
-decomposes: `theil_decomposition` splits national inequality exactly into a
-within-state and a between-state part, and `oaxaca_blinder` splits a group gap
-into endowments and returns. `benefit_incidence` asks who actually receives a
-public budget, which for tertiary health and higher education is usually not the
-people it was voted for.
-
-**`survey_estimation/`** answers *how sure are we*. Weighting is the half
-everyone remembers; a national household survey is also clustered, and an
-interval that ignores that is too narrow, often by half, erring in the direction
-that flatters the result.
-
-Together they are the two halves of an equity finding: the gradient, and whether
-it is real.
+**`survey_estimation/`** gives proportions and means for stratified, clustered
+surveys with standard errors that account for the design, the same estimator
+as Stata's `svy:` and R's `survey`. Checked against R's `survey` 4.2.1 to
+twelve significant figures. A worked example reproduces the published NFHS-5
+stunting table. See [`survey_estimation/README.md`](survey_estimation/README.md).
 
 ```python
 from inequality import concentration_index, theil_decomposition
 from survey_estimation import svy_prop_by
 
-svy_prop_by(df, "stunted", by="wealth_quintile")          # is the gap real?
-concentration_index(df.stunted, rank_by=df.wealth_index)  # how steep is it?
-theil_decomposition(df.consumption, groups=df.state)      # where does it sit?
+svy_prop_by(df, "stunted", by="wealth_quintile")
+concentration_index(df.stunted, rank_by=df.wealth_index)
+theil_decomposition(df.consumption, groups=df.state)
 ```
 
-`inequality/README.md` has the full function-by-function guide, the four things
-that are easy to get wrong, and how to bootstrap a standard error over PSUs.
+## Other modules
 
-## What's Inside
+| Module | What it does |
+| --- | --- |
+| `cleaning/` | Column names, types, missing values, outlier flags, a cleaning log |
+| `impact_evaluation/` | Difference-in-differences, propensity score matching, regression discontinuity |
+| `validation/` | Input validation with Pydantic models |
+| `io_helpers/` | Chunked CSV reading, Stata and SPSS import, formatted Excel export |
+| `modelling/` | Multicollinearity checks (VIF) |
+| `visualisation/` | Annotated bar charts, district choropleth maps |
+| `social_sector/` | Composite indices with stated direction, normalisation and weights, and a rank-sensitivity check |
+| `notebooks/` | Two worked analyses: gender-disaggregated outcomes, women's time use |
+| `sample_data/` | Small CSVs to try the code on |
 
-### Core Modules
+Most of these are short. `inequality/`, `survey_estimation/` and
+`impact_evaluation/` hold most of the code.
 
-| Module | What It Does | Status |
-|--------|-------------|--------|
-| `cleaning/` | Column name standardisation, dtype conversion, missing value handling, outlier flagging, cleaning log generation | Ready |
-| `impact_evaluation/` | Causal inference: Difference-in-Differences, Propensity Score Matching, Regression Discontinuity Design | Ready |
-| `validation/` | Input validation with Pydantic models | Ready |
-| `io_helpers/` | Chunked CSV reading, Stata/SPSS import, formatted Excel export | Ready |
-| `modelling/` | Multicollinearity checks (VIF) | Ready |
-| `visualisation/` | Annotated bar charts, district-level choropleth maps | Ready |
-| `inequality/` | **Distributional analysis**: Gini, Theil, Atkinson, Palma, Lorenz and concentration curves, the concentration index with Erreygers and Wagstaff corrections, Theil within/between decomposition, Blinder-Oaxaca, benefit incidence | Ready |
-| `social_sector/` | Composite indices with explicit direction, normalisation and weighting, plus a rank-sensitivity check | Ready |
-| `survey_estimation/` | Design-based proportions and means for stratified, clustered surveys, with a worked NFHS-5 example | Ready |
+## Install and test
 
-### Notebooks
-
-| Notebook | What It Does |
-|----------|-------------|
-| `sector_gender_summary.ipynb` | Gender-disaggregated analysis with sample data |
-| `sector_wee_time_use.ipynb` | Women's economic empowerment time-use analysis |
-
-### Data and Testing
-
-| Directory | What It Contains |
-|-----------|-----------------|
-| `sample_data/` | Gender sample and time-use sample datasets |
-| `tests/` | 11 pytest test files covering all core modules |
-| `scripts/` | Standalone export utilities |
-
-## Getting Started
-
-### Prerequisites
-
-- **Python 3.8+**
-- **Jupyter** (notebook or lab)
-
-### Installation
+Python 3.11. Versions in `requirements.txt` are pinned and were verified
+together.
 
 ```bash
 git clone https://github.com/Varnasr/EquityStack.git
 cd EquityStack
 pip install -r requirements.txt
-jupyter notebook
+PYTHONPATH=$(pwd) pytest tests/      # 101 tests
 ```
 
-### Quick Start
+## The family
 
-1. Open a notebook from `notebooks/` to see a working analysis
-2. Load practice data from `sample_data/`
-3. Use `cleaning/` to prepare your own data
-4. Apply `modelling/` and `visualisation/` for analysis and outputs
-5. Export with `io_helpers/` for Excel or dashboard-ready formats
+| Repository | What it is for | Language |
+| --- | --- | --- |
+| [InsightStack](https://github.com/Varnasr/InsightStack) | MEL tools, calculators, research documentation, loaders for survey microdata | Stata, Python, R, SPSS |
+| [FieldStack](https://github.com/Varnasr/FieldStack) | Field operations while a survey is in the field; sampling and weighted estimation after | R |
+| **EquityStack** (this repository) | Inequality measurement and design-based survey estimation | Python |
 
-### Key Dependencies
+[openstacks.dev](https://openstacks.dev) is the index.
+[SignalStack](https://github.com/Varnasr/SignalStack) is the companion archive
+for the [Research Rundown](https://varna.substack.com) newsletter, beside the
+stacks rather than one of them.
+[PolicyStack](https://github.com/Varnasr/PolicyStack) is superseded by
+[PolicyDhara](https://github.com/Varnasr/PolicyDhara). RootStack, BridgeStack
+and ViewStack are archived.
 
-- pandas, numpy, scipy — data manipulation and statistics
-- matplotlib, seaborn — visualisation
-- statsmodels — modelling
-- openpyxl, xlsxwriter — Excel I/O
-- pyreadstat — Stata and SPSS I/O
-- pydantic — data validation
-- geopandas, folium — spatial mapping
-- ydata-profiling — quick EDA reports
+`survey_estimation/dhs_stunting.py` reads the CSV written by InsightStack's
+DHS loader. FieldStack's `survey_tools/dhs_stunting.R` does the same in R, and
+the two agree on the same data.
 
-Versions are pinned in `requirements.txt` and were resolved together and
-verified on Python 3.11 with the suite green.
-
-## How It Connects
-
-EquityStack is one of several stacks in the [OpenStacks](https://openstacks.dev) ecosystem:
-
-| Stack | Focus |
-|-------|-------|
-| [InsightStack](https://github.com/Varnasr/InsightStack) | MEL tools, calculators, research documentation, and loaders for real survey microdata. Stata, Python, R, SPSS |
-| [FieldStack](https://github.com/Varnasr/FieldStack) | Field operations while a survey is being collected, and survey analysis after. R |
-| **EquityStack** (this repo) | Equity from a development economics perspective: distributional analysis, the concentration index, and design-based survey estimation. Python |
-
-[openstacks.dev](https://openstacks.dev) is the index for all of it. [SignalStack](https://github.com/Varnasr/SignalStack) is the companion archive for the [Research Rundown](https://varna.substack.com) newsletter, alongside the stacks rather than one of them. [PolicyStack](https://github.com/Varnasr/PolicyStack) is superseded by [PolicyDhara](https://github.com/Varnasr/PolicyDhara). RootStack, BridgeStack and ViewStack are archived.
-
-**Use EquityStack when** you work in Python/Jupyter. Use **FieldStack** for R-based equivalents. Use **InsightStack** for Stata tools and MEL calculators.
-
-## Contributing
-
-Contributions welcome — especially from data practitioners in the development sector. See [contributing guidelines](https://github.com/Varnasr/.github/blob/main/CONTRIBUTING.md).
-
-High-impact areas:
-- **EDA tools** — correlation matrices, group summaries, data profiling
-- **Modelling** — logistic regression evaluation, OLS summary tables
-- **Social sector** — climate risk flags, education outcomes, gender disaggregation, WEE analysis
-- **Notebooks** — more worked examples with real analysis workflows
-- **Visualisation** — categorical distributions, regression diagnostics, time series
-
-## Citation
+## Citation and license
 
 ```bibtex
 @software{equitystack,
   author = {Sri Raman, Varna},
-  title = {EquityStack: Python Workflows for Development Data},
+  title = {EquityStack: inequality measurement and survey estimation in Python},
   url = {https://github.com/Varnasr/EquityStack}
 }
 ```
 
-## License
-
-MIT — free to use, modify, and share. See [LICENSE](LICENSE).
-
----
-
-Part of [OpenStacks for Change](https://openstacks.dev). Created by [Varna Sri Raman](https://on-web.link/varna).
+MIT. See [LICENSE](LICENSE).

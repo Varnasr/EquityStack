@@ -3,7 +3,7 @@
 This folder contains automated tests for all core `.py` scripts in the repo.  
 These are **sanity checks** to ensure that each function runs with expected inputs and does not raise errors.
 
-## 🔧 How to Run
+## How to Run
 
 1. Install dependencies:
 
@@ -18,7 +18,7 @@ pip install pytest
 pytest tests/
 ```
 
-## 🧪 Coverage
+## Coverage
 
 This suite tests:
 
