@@ -26,9 +26,9 @@
 
 <section class="hero">
   <h1 class="word">Equity<span class="s2">Stack</span></h1>
-  <p class="lede">Python for development sector data workflows: cleaning, exploration, modelling,
-    impact evaluation, and design-based estimates from complex surveys. Part of
-    <a href="https://openstacks.dev">OpenStacks</a>.</p>
+  <p class="lede">The Python you reach for on a development research project: getting messy data into
+    shape, asking whether a programme worked, and getting the confidence intervals right
+    when the survey is clustered. Part of <a href="https://openstacks.dev">OpenStacks</a>.</p>
   <div class="counts">
     <div class="hi"><b>9</b><span>Modules</span></div>
     <div><b>34</b><span>Python files</span></div>
@@ -48,27 +48,26 @@
     <a class="tile" href="https://github.com/Varnasr/EquityStack/tree/main/survey_estimation">
       <p class="meta">survey_estimation/</p>
       <h3>Design-based standard errors</h3>
-      <p>Weights are the easy half. A national household survey is stratified and clustered, so an
-         independence standard error is too small, often by a factor of two, and every interval
-         built on it errs in the direction that flatters the result. This implements Taylor
-         linearisation, the estimator behind Stata's <code>svy:</code> and R's <code>survey</code>.</p>
+      <p>Weighting is the half everyone remembers. A national household survey is also clustered,
+         so an interval that ignores that is too narrow, often by half, and it errs in the
+         direction that flatters your result. This does it properly, the same way Stata's
+         <code>svy:</code> and R's <code>survey</code> do.</p>
       <p class="go">Read the module &rarr;</p>
     </a>
     <a class="tile" href="https://github.com/Varnasr/EquityStack/blob/main/survey_estimation/dhs_stunting.py">
       <p class="meta">Worked example</p>
       <h3>NFHS-5 stunting, reproduced</h3>
-      <p>Rebuilds India's published stunting table by wealth quintile from the raw DHS children's
-         recode: 35.5 percent nationally, 46.1 in the poorest quintile falling to 22.9 in the
-         richest. Reproducing a published table is the only cheap proof a pipeline is right end
-         to end.</p>
+      <p>Rebuilds India's published stunting table from the raw NFHS-5 files: 35.5 percent
+         nationally, 46.1 in the poorest fifth falling to 22.9 in the richest. If your numbers
+         match the published ones, your pipeline is sound. If they do not, you know before you
+         publish rather than after.</p>
       <p class="go">Read the script &rarr;</p>
     </a>
   </div>
-  <p class="note">Checked against R's <code>survey</code> package on the same data, agreeing to
-    twelve significant figures. Three behaviours that look like details and are not: subgroups
-    are domains rather than subsets, proportions get a logit interval so a small one cannot go
-    negative, and intervals use t on clusters minus strata and say which distribution produced
-    them.</p>
+  <p class="note">Checked against R's <code>survey</code> package on the same data, to twelve significant
+    figures. Three things it gets right that a hand-rolled version usually does not: a subgroup
+    keeps the clusters it does not appear in, a small percentage never gets a negative lower
+    bound, and the interval widens correctly when you have few clusters.</p>
 </section>
 
 <section class="band navy" id="modules">
@@ -79,43 +78,42 @@
   <div class="rows">
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/cleaning">
       <span class="t"><b>Cleaning</b><span>Python</span></span>
-      <span class="d">Column name standardisation, dtype conversion, missing value handling and a cleaning log.</span></a>
+      <span class="d">Get a messy export into shape, and keep a record of what you changed.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/eda">
       <span class="t"><b>Exploration</b><span>Python</span></span>
-      <span class="d">Quick data profiling to see the shape of a dataset before committing to it.</span></a>
+      <span class="d">Look hard at a new dataset before you trust it with a finding.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/impact_evaluation">
       <span class="t"><b>Impact evaluation</b><span>Python</span></span>
-      <span class="d">Difference-in-differences, propensity score matching and regression discontinuity.</span></a>
+      <span class="d">Did the programme work? Difference-in-differences, matching and regression discontinuity.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/survey_estimation">
       <span class="t"><b>Survey estimation</b><span>Python</span></span>
-      <span class="d">Design-based proportions and means for stratified, clustered samples.</span></a>
+      <span class="d">Get the confidence intervals right on NFHS, DHS or PLFS, where the sample is clustered.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/modelling">
       <span class="t"><b>Modelling</b><span>Python</span></span>
-      <span class="d">Multicollinearity checks by variance inflation factor.</span></a>
+      <span class="d">Check whether two of your predictors are telling you the same thing twice.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/validation">
       <span class="t"><b>Validation</b><span>Pydantic</span></span>
-      <span class="d">Input validation with typed models, so a bad column fails early rather than silently.</span></a>
+      <span class="d">Stop a bad column at the door, before it becomes a wrong number in someone's report.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/io_helpers">
       <span class="t"><b>Input and output</b><span>Python</span></span>
-      <span class="d">Chunked CSV reading, Stata and SPSS import, formatted Excel export.</span></a>
+      <span class="d">Open a Stata or SPSS file, read a CSV too big for memory, hand a colleague a usable spreadsheet.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/social_sector">
       <span class="t"><b>Social sector</b><span>Python</span></span>
-      <span class="d">A public health access index.</span></a>
+      <span class="d">Build a health access index and compare districts on it.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/visualisation">
       <span class="t"><b>Visualisation</b><span>Python</span></span>
-      <span class="d">Annotated bar charts and district-level choropleth maps.</span></a>
+      <span class="d">District maps and annotated charts that can go straight into a report.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/notebooks">
       <span class="t"><b>Notebooks</b><span>Jupyter</span></span>
-      <span class="d">Gender-disaggregated analysis and a women's economic empowerment time-use study.</span></a>
+      <span class="d">Two worked analyses: gender-disaggregated outcomes, and women's time use.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/sample_data">
       <span class="t"><b>Sample data</b><span>CSV</span></span>
-      <span class="d">Small datasets the modules and tests run against.</span></a>
+      <span class="d">Small datasets to try any of the above on.</span></a>
     <a class="row" href="https://github.com/Varnasr/EquityStack/tree/main/workflows">
       <span class="t"><b>Workflows</b><span>Guides</span></span>
-      <span class="d">End-to-end routes through an analysis.</span></a>
+      <span class="d">Start-to-finish routes through an analysis, so you know what comes next.</span></a>
   </div>
-  <p class="note">These open on GitHub. They are source code rather than pages: Python modules
-    meant to be read, cloned and run, not browsed like a website.</p>
+  <p class="note">These open on GitHub, where the code lives.</p>
 </section>
 
 <section class="band ash">
