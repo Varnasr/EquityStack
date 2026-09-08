@@ -77,12 +77,17 @@ jupyter notebook
 
 ### Key Dependencies
 
-- pandas, numpy — data manipulation
+- pandas, numpy, scipy — data manipulation and statistics
 - matplotlib, seaborn — visualisation
-- scikit-learn, statsmodels — modelling
+- statsmodels — modelling
 - openpyxl, xlsxwriter — Excel I/O
+- pyreadstat — Stata and SPSS I/O
 - pydantic — data validation
 - geopandas, folium — spatial mapping
+- ydata-profiling — quick EDA reports
+
+Versions are pinned in `requirements.txt` and were resolved together and
+verified on Python 3.11 with the suite green.
 
 ## How It Connects
 
