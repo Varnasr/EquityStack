@@ -224,8 +224,14 @@ a { color: inherit; text-decoration: none; }
 .prose hr { border: none; border-top: 2px solid var(--black); margin: 2rem 0; }
 
 /* Descriptions in the compact source list. A visible line beats a hover title,
-   which no touch device shows and no screen reader announces reliably. */
+   which no touch device shows and no screen reader announces reliably.
+   `.row span` above sets white-space: nowrap for the short language tag. A
+   description is also a span, so it inherited that and ran off the side of the
+   phone instead of wrapping. Scope the nowrap to the tag. */
 .row { flex-direction: column; align-items: flex-start; gap: .25rem; }
-.row .d { font-size: .8rem; opacity: .78; line-height: 1.35; }
+.row .d { font-size: .8rem; opacity: .78; line-height: 1.35;
+          white-space: normal; overflow-wrap: anywhere; }
 .row .t { display: flex; justify-content: space-between; align-items: baseline;
-          gap: .6rem; width: 100%; }
+          gap: .6rem; width: 100%; white-space: normal; }
+.row .t b { overflow-wrap: anywhere; }
+.row .t span { white-space: nowrap; flex: none; }
