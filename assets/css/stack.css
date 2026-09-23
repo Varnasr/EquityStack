@@ -129,7 +129,16 @@ a { color: inherit; text-decoration: none; }
        transition: background .12s, color .12s; }
 .row:hover, .row:focus-visible { background: var(--ink); color: var(--bg); }
 .row b { font-weight: 600; font-size: .95rem; }
-.row span { font-family: var(--mono); font-size: .66rem; opacity: .7; white-space: nowrap; }
+.row span { font-family: var(--mono); font-size: .66rem; white-space: nowrap; }
+/* Opacity belongs on the tag, not on every span in the row. `.t` is itself a
+   span wrapping the title and the tag, so `.row span { opacity: .7 }` applied
+   twice to the tag (0.7 x 0.7 = 0.49) and once to the title. Measured on the
+   InsightStack landing page: the tag came out #84827f on #f6f2ea, 3.43:1 at
+   10.56px, failing AA on 18 elements, and every row title rendered at 70%
+   opacity, which is the opposite of what `.row b { font-weight: 600 }` is for.
+   The comment below already records the same selector doing the same thing to
+   white-space; that was scoped and this was not. */
+.row .t > span { opacity: .7; }
 
 /* --- calculator layout --------------------------------------------------- */
 .calc { display: grid; grid-template-columns: 1.05fr .95fr; gap: 0;

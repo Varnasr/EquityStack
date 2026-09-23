@@ -4,7 +4,7 @@
 # failure waiting for a quiet week.
 #
 # Every version below was resolved together and verified on Python 3.11 with the
-# full test suite green (25 tests). Raise them deliberately, together, and re-run
+# full test suite green (101 tests). Raise them deliberately, together, and re-run
 # the suite; do not let a resolver do it silently.
 
 pandas==2.3.3

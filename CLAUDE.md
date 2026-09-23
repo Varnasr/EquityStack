@@ -44,7 +44,12 @@ Two things a future session should know:
 ## Testing
 
 `.github/workflows/python-tests.yml` runs `pytest tests/` on pull requests and
-pushes to main. 25 tests.
+pushes to main. **101 tests**, verified on 2026-09-23 against the pinned set on
+Python 3.11.
+
+This said 25 for as long as the file existed, and so did the header comment in
+`requirements.txt`, while the Layout section above said 101. Two numbers for one
+suite, in one repository, and nothing compared either against `pytest`.
 
 ```
 pip install -r requirements.txt
