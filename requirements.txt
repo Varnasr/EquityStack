@@ -7,7 +7,7 @@
 # full test suite green (101 tests). Raise them deliberately, together, and re-run
 # the suite; do not let a resolver do it silently.
 
-pandas==2.3.3
+pandas==3.0.6
 numpy==2.3.5
 scipy==1.16.3
 matplotlib==3.10.0
