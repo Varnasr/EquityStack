@@ -50,8 +50,8 @@ Most of these are short. `inequality/`, `survey_estimation/` and
 
 ## Install and test
 
-Python 3.11. Versions in `requirements.txt` are pinned and were verified
-together.
+Python 3.12 (CI runs 3.12; the pinned set also passes on 3.11). Versions in
+`requirements.txt` are pinned and were verified together.
 
 ```bash
 git clone https://github.com/Varnasr/EquityStack.git

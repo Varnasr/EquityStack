@@ -29,8 +29,8 @@ pytest with plain asserts. Match it.
 **Pinned exactly, on purpose.** The maintenance policy asks that a clone still
 run years from now, and an unpinned set on a Stable repository nobody is
 watching is a CI failure waiting for a quiet week. Every version in
-`requirements.txt` was resolved together and verified on Python 3.11 with the
-suite green. Raise them deliberately and together, then re-run the suite. Do not
+`requirements.txt` was resolved together and verified on Python 3.11, and on 3.12
+for the move of CI to 3.12 on 2 November 2026, with the suite green. Raise them deliberately and together, then re-run the suite. Do not
 let a resolver do it silently.
 
 Two things a future session should know:
@@ -46,8 +46,10 @@ Two things a future session should know:
 ## Testing
 
 `.github/workflows/python-tests.yml` runs `pytest tests/` on pull requests and
-pushes to main. **101 tests**, verified on 2026-09-23 against the pinned set on
-Python 3.11.
+pushes to main on Python 3.12. **101 tests**, verified on 2026-09-23 against the
+pinned set on Python 3.11 and again on 2 November 2026 on 3.12. The move was
+forced by numpy 2.5, which publishes no 3.11 wheel (Dependabot's PR #37 failed to
+install for that reason).
 
 This said 25 for as long as the file existed, and so did the header comment in
 `requirements.txt`, while the Layout section above said 101. Two numbers for one

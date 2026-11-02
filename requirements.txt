@@ -3,8 +3,9 @@
 # and an unpinned dependency set on a repository nobody is watching is a CI
 # failure waiting for a quiet week.
 #
-# Every version below was resolved together and verified on Python 3.11 with the
-# full test suite green (101 tests). Raise them deliberately, together, and re-run
+# Every version below was resolved together and verified on Python 3.11, and on
+# 3.12 on 2 November 2026, with the full test suite green (101 tests). CI runs
+# 3.12, because numpy 2.5 has no 3.11 wheel. Raise them deliberately, together, and re-run
 # the suite; do not let a resolver do it silently.
 
 pandas==2.3.3
