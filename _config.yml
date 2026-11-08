@@ -1,5 +1,7 @@
 title: EquityStack
 description: Python scripts and notebooks for development sector data workflows.
+url: https://varnasr.github.io
+baseurl: /EquityStack
 markdown: kramdown
 
 # GitHub Pages runs this plugin, which turns each folder's README.md into that
