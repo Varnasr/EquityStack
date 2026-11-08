@@ -2,6 +2,9 @@ title: EquityStack
 description: Python scripts and notebooks for development sector data workflows.
 url: https://varnasr.github.io
 baseurl: /EquityStack
+# Default link-preview card, drawn by scripts/make_share_card.py. A page can set image and image_alt.
+share_image: /assets/share-card.jpg
+share_image_alt: "EquityStack. Python for distributional analysis and design-based survey estimation in development research. Part of the OpenStacks family."
 markdown: kramdown
 
 # GitHub Pages runs this plugin, which turns each folder's README.md into that
